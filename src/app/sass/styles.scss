@@ -1,0 +1,47 @@
+@use 'base';
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+@mixin centered($direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+
+.App {
+  background: base.$bg-color;
+  color: base.$ft-color;
+  font-family: base.$font-stack;
+  font-weight: 700;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+header{
+  @include centered(column);
+  width: 100%;
+  .main-header{
+    color: base.$primary-color;
+    font-weight:900;
+    font-size: 3em;
+    margin-bottom: 0px;
+  }
+  
+  .secondary-header{
+    color: base.$accent-color;
+    font-weight: 500;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+  
+  .main-body{
+    @include centered(column);
+  }
