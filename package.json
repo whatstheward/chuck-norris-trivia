@@ -1,6 +1,5 @@
 {
   "name": "chuck-norris-trivia",
-
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,7 +18,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --setupFilesAfterEnv ./src/setupTests.js",
+    "test:jest": "react-scripts test --setupFilesAfterEnv ./src/setupTests.js",
+    "test:cypress": "npx cypress open-ct",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
