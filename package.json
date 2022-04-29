@@ -1,9 +1,6 @@
 {
   "name": "chuck-norris-trivia",
-  "jest": {
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
-    "testPathIgnorePatterns": ["src/components"]
-  },
+
   "version": "0.1.0",
   "private": true,
   "dependencies": {
