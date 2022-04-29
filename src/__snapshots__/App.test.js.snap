@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should display image above header in desktop mode 1`] = `
+<div
+  className="App"
+>
+  <header>
+    <img
+      alt="Chuck Norris Random Facts"
+      id="header-img"
+      src="Chuck_Norris.png"
+    />
+    <h1
+      className="main-header"
+    >
+      Chuck Norris
+    </h1>
+    <h2
+      className="secondary-header"
+    >
+      Random Facts
+    </h2>
+  </header>
+  <div
+    className="main-body"
+  >
+    <Trivia
+      loadingFact="idle"
+    />
+    <Searchbar
+      fetchChuckFact={[Function]}
+      handleSubmit={[Function]}
+      loadingFact="idle"
+    />
+  </div>
+  <footer>
+    built with 
+    <a
+      href="https://api.chucknorris.io"
+      target="blank"
+    >
+      https://api.chucknorris.io
+    </a>
+  </footer>
+</div>
+`;

@@ -1,0 +1,6 @@
+{
+  "setupFilesAfterEnv": [
+    "./setupTests.js"
+  ],
+  "testPathIgnorePatterns": ["src/components"]
+}
