@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Chuck Norris Trivia is a simple application to learn fun facts about Chuck Norris. Get a random fact, or look for a specific fact with our search feature! 
 
+To run the application, clone this repo to your local machine. Run `npm install` and `npm start`.
+
 This application is powered by [https://api.chucknorris.io](https://api.chucknorris.io)
 
 ## Available Scripts

@@ -6,5 +6,5 @@
     "preserveConstEnums": true,
     "sourceMap": true
   },
-  "files": ["./src/*"]
+  "files": ["./src"]
 }
