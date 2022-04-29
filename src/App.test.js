@@ -1,8 +1,16 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import * as React from 'react'
+import App from './App'
+import {shallow} from 'enzyme'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+const resizeWindow = (x,y)=> {
+  window.innerWidth = x
+  window.innerHeight = y
+  window.dispatchEvent(new Event('resize'))
+}
+
+describe('App', () => {
+  it('should display image above header in desktop mode', () => {
+    const app = shallow(<App />)
+    expect(app).toMatchSnapshot()
+  })
+})

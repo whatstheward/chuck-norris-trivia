@@ -7,26 +7,41 @@ html, body, #root {
 }
 
 .App {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-flow: column nowrap;
+  flex: 0;
   background: #202249;
   color: #ffffff;
   font-family: Roboto, sans-serif;
   font-weight: 700;
   height: 100%;
-  display: flex;
-  align-items: flex-start;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  margin: 20;
+}
+
+#header-img {
+  height: 200px;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-flow: column wrap;
+  flex: 0;
+  margin-top: 20px;
   width: 100%;
 }
 header .main-header {
   color: #ffcb00;
   font-weight: 900;
-  font-size: 3em;
+  font-size: 3rem;
   margin-bottom: 0px;
 }
 header .secondary-header {
@@ -38,9 +53,187 @@ header .secondary-header {
 
 .main-body {
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: row wrap;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.trivia-fact {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-flow: column wrap;
+  flex: 1;
+  width: 100%;
+}
+.trivia-fact section {
+  width: 50%;
+}
+.trivia-fact section div {
+  margin: 0 auto;
+}
+.trivia-fact section p {
+  margin: 0 15%;
+}
+
+#search-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: column wrap;
+  flex: 1;
+  width: 100%;
+}
+#search-container form {
+  display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-flow: column wrap;
+  flex: 0;
+  margin: 0 15%;
+}
+#search-container form section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  flex: 0;
+}
+#search-container form section button {
+  margin: 20px;
+  width: 50%;
+}
+#search-container .error {
+  margin: 0 15%;
+  text-align: center;
+  color: #e31918;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-device-width: 480px) {
+  #header-img {
+    display: none;
+  }
+
+  .main-body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: column wrap;
+    flex: 1;
+  }
+
+  .trivia-fact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    flex: 1;
+    width: 100%;
+    max-height: 200px;
+    min-height: 200px;
+    margin-top: 20px;
+  }
+  .trivia-fact section {
+    width: initial;
+  }
+  #search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: column wrap;
+    flex: 1;
+  }
+}
+@keyframes dotPulseBefore {
+  0% {
+    box-shadow: 9954px 0px 0px -5px white;
+  }
+  30% {
+    box-shadow: 9954px 0 0 2px white;
+  }
+  60%, 100% {
+    box-shadow: 9954px 0 0 -5px white;
+  }
+}
+@keyframes dotPulse {
+  0% {
+    box-shadow: 9985px 0 0 -5px white;
+  }
+  30% {
+    box-shadow: 9985px 0 0 2px white;
+  }
+  60%, 100% {
+    box-shadow: 9985px 0 0 -5px white;
+  }
+}
+@keyframes dotPulseAfter {
+  0% {
+    box-shadow: 10014px 0 0 -5px white;
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px white;
+  }
+  60%, 100% {
+    box-shadow: 10014px 0 0 -5px white;
+  }
+}
+.dot-pulse {
+  position: relative;
+  left: -9999px;
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: white;
+  color: white;
+  box-shadow: 9999px 0 0 -5px white;
+  animation: dotPulse 1.5s infinite linear;
+  animation-delay: 0.25s;
+}
+
+.dot-pulse::before, .dot-pulse::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+  background-color: white;
+  color: white;
+}
+
+.dot-pulse::before {
+  box-shadow: 9984px 0 0 -5px white;
+  animation: dotPulseBefore 1.5s infinite linear;
+  animation-delay: 0s;
+}
+
+.dot-pulse::after {
+  box-shadow: 10014px 0 0 -5px white;
+  animation: dotPulseAfter 1.5s infinite linear;
+  animation-delay: 0.5s;
+}
+
+footer {
+  font-weight: 300;
+  margin: 5px;
+}
+footer a {
+  color: white;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */
