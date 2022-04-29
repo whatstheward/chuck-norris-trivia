@@ -1,6 +1,6 @@
 import * as React from 'react'
+import renderer from 'react-test-renderer'
 import App from './App'
-import {shallow} from 'enzyme'
 
 const resizeWindow = (x,y)=> {
   window.innerWidth = x
@@ -9,8 +9,27 @@ const resizeWindow = (x,y)=> {
 }
 
 describe('App', () => {
-  it('should display image above header in desktop mode', () => {
-    const app = shallow(<App />)
-    expect(app).toMatchSnapshot()
+  it('renders without crashing', () => {
+    const comp = renderer
+      .create(<App />)
+      .toJSON()
+    expect(comp).toMatchSnapshot()
+  })
+  it('renders image above header in desktop mode', () => {
+    const comp = renderer
+    .create(<App />)
+    .toJSON()
+    const node = comp.children[0]
+    expect(node.type).toMatch(/header/)
+    expect(node.children[0].props.id).toBe('header-img')
+  })
+  it('does not render image above header in mobile mode', () => {
+    resizeWindow(700, 900)
+    const comp = renderer
+    .create(<App />)
+    .toJSON()
+    const node = comp.children[0]
+    expect(node.children[0].type).toBe('img')
+    expect(node.children[0].children).toBe(null)
   })
 })

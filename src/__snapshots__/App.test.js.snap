@@ -1,5 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`App renders without crashing 1`] = `
+<div
+  className="App"
+>
+  <header>
+    <img
+      alt="Chuck Norris Random Facts"
+      id="header-img"
+      src="Chuck_Norris.png"
+    />
+    <h1
+      className="main-header"
+    >
+      Chuck Norris
+    </h1>
+    <h2
+      className="secondary-header"
+    >
+      Random Facts
+    </h2>
+  </header>
+  <div
+    className="main-body"
+  >
+    <article
+      className="trivia-fact"
+    >
+      <section>
+        <h2>
+          Did you know...
+        </h2>
+        <div>
+          <div
+            className="dot-pulse"
+          />
+        </div>
+      </section>
+    </article>
+    <div
+      id="search-container"
+    >
+      <form
+        onSubmit={[Function]}
+      >
+        <h2>
+          Search for Facts
+        </h2>
+        <input
+          name="search"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+        <section>
+          <button
+            disabled={true}
+            type="submit"
+          >
+            Search
+          </button>
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+            Random
+          </button>
+        </section>
+      </form>
+    </div>
+  </div>
+  <footer>
+    built with 
+    <a
+      href="https://api.chucknorris.io"
+      target="blank"
+    >
+      https://api.chucknorris.io
+    </a>
+  </footer>
+</div>
+`;
+
 exports[`App should display image above header in desktop mode 1`] = `
 <div
   className="App"
